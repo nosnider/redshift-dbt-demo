@@ -1,0 +1,12 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dbt-redshift = "1.4.1"
+
+[dev-packages]
+
+[requires]
+python_versio = "3.11"
