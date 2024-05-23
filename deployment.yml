@@ -9,6 +9,8 @@ jobs:
    # If timeout is not specified, the job will be terminated after 24 hours.
    timeout: 2h30m
    steps:
+     - name: debug models # Give each step in your job a name. This will enable you to track the steps in the logs.
+       command: dbt debug # Enter the dbt command that should run in this step. This example will run all your models. For a list of available commands visit https://docs.getdbt.com/reference/model-selection-syntax/.    
      - name: run models # Give each step in your job a name. This will enable you to track the steps in the logs.
        command: dbt run # Enter the dbt command that should run in this step. This example will run all your models. For a list of available commands visit https://docs.getdbt.com/reference/model-selection-syntax/.
      - name: test models
